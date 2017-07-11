@@ -1,6 +1,6 @@
 {
   "name": "cropit",
-  "main": "dist/jquery.cropit.js",
+  "main": "dist/cropit",
   "description": "Customizable crop and zoom.",
   "version": "0.5.1",
   "author": {
@@ -23,6 +23,7 @@
   },
   "license": "MIT",
   "scripts": {
+    "build": "babel ./src --out-dir ./dist --source-maps",
     "test": "jest",
     "jshint": "jshint src test --reporter=node_modules/jshint-stylish"
   },
@@ -50,9 +51,11 @@
     "jquery": ">=1.9"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-core": "~5.5.8",
     "babel-jest": "~5.3.0",
     "babel-loader": "~5.1.4",
+    "babel-preset-latest": "^6.24.1",
     "jest-cli": "^0.8.2",
     "jshint-stylish": "~2.0.0",
     "lodash": "~3.9.3",
